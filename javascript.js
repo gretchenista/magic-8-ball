@@ -14,7 +14,7 @@ var randomAnswer = this.listOfAnswers[randomIndex];
 	$("#answer").hide();
 		$("#answer").fadeIn(4000);
 	$("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png");
-
+    $("#8ball").effect("shake");
  console.log(question);
 	console.log(randomAnswer);
 
@@ -28,10 +28,11 @@ var onClick = function(){
 	var question = prompt("Ask a yes or no question.");
 		magic8Ball.askQuestion(question);
     }, 500);
-$("#8ball").effect("shake");
+
 	
 };
 
 	$("#questionButton").click(onClick);
+    $("#answer").hide(); 
 	
 });
